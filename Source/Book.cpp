@@ -9,8 +9,8 @@ std::ostream& Book::operator<<(std::ostream& os){
     return os<<this->isbn;
 }*/
 
-Book::Book(std::string n, std::string c, std::string t, Isbn i) : 
-    nome {n}, cognome {c}, titolo{t}, isbn{i} {}
+Book::Book(std::string n, std::string c, std::string t, Isbn i, Date d) : 
+    nome {n}, cognome {c}, titolo{t}, isbn{i}, data{d} {}
 
 Isbn Book::getIsbn(){
     return isbn;

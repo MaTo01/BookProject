@@ -20,7 +20,7 @@ public:
     Isnb e Date; ogni Book creato e' reso disponibile*/
     //TODO: costruttore con stringa ISBN
     Book() : nome{""}, cognome{""}, titolo{""}, isbn{Isbn()}, data{Date()}, disponibile{true} {}
-    Book(Isbn, std::string, std::string, std::string);
+    Book(std::string, std::string, std::string, Isbn, Date);
     class Invalid{};
 
     Isbn getIsbn();
