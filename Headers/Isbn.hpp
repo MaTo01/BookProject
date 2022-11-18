@@ -14,6 +14,7 @@ public:
 
     Isbn() : n1{0}, n2{0}, n3{0}, x{'0'} {}
     Isbn(int, int, int, char);
+    Isbn(std::string);
     int getN1();
     int getN2();
     int getN3();
