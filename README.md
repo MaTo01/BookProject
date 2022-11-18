@@ -5,7 +5,8 @@ Progettare e implementare la classe Book che rappresenta un libro in una bibliot
 		• ISBN
 		• Titolo
 		• Nome e cognome autore (due membri diversi)
-		• Data di copyright – la data è rappresentata usando una apposita classe Date simile a quella sviluppata a lezione
+		• Data di copyright – la data è rappresentata usando una apposita classe Date 
+		  simile a quella sviluppata a lezione
 		• Stato in prestito / disponibile
 
 Il codice ISBN può essere rappresentata mediante una std::string oppure una classe dedicata. In ogni caso, l’ISBN deve avere il formato 
@@ -16,7 +17,8 @@ La classe Book deve essere dotata di:
   		• Funzioni membro che ritornano i vari campi
   		• Costruttori
   		• Funzioni per registrare il prestito e la restituzione
-  		• Appositi strumenti (eventualmente implementati nella classe dedicata) per la validazione del formato ISBN e della data
+  		• Appositi strumenti (eventualmente implementati nella classe dedicata) per la 
+		  validazione del formato ISBN e della data
   		• Operator== e operator!= che confrontano due libri basandosi sul codice ISBN
   		• Operator<< che stampa titolo, autore, ISBN e la data di copyright su righe separate in output
 
