@@ -48,19 +48,25 @@ bool Book::isDisponibile(){ /*gestisce lo stato del libro: */
     return disponibile;
 }
 void Book::presta(){
-    if(isDisponibile){
+    if(disponibile){
         disponibile = false;
     }
 }
-void restituisci(){
-    if(!isDisponibile){
+void Book::restituisci(){
+    if(!disponibile){
         disponibile = true;
     }
 }
 
 //confronta due libri basandosi sul codice ISBN
-bool operator==(Book){ 
+bool Book::operator==(Book b) { 
     
 }
-bool operator!=(Book);
-std::ostream& operator<<(std::ostream&);
+
+bool Book::operator!=(Book b) {
+
+}
+
+std::ostream& Book::operator<<(std::ostream& os) {
+
+}
