@@ -28,5 +28,6 @@ Un ulteriore file .cpp deve contenere il main, usato per i test. È apprezzato l
 Oltre ai test necessari per lo sviluppo, devono essere compilabili le seguenti istruzioni:
 
   		• std::vector<Book> shelf(10);
-  		• Book my_favourite_book(“David”, “Foster Wallace”, “Una cosa divertente che non farò mai più”, “887-521-837-4”);
+  		• Book my_favourite_book(“David”, “Foster Wallace”, “Una cosa divertente 
+		  che non farò mai più”, “887-521-837-4”);
 
