@@ -1,15 +1,16 @@
 #include "Date.hpp"
 #include <iostream>
 
-Date::Date(int d=1, Month m=jan, int y=1600){
+Date::Date(int d, Month m, int y){
     if(validate(d, m, y))
         day = d, month = m, year = y;
-    else throw new Invalid{};
+    else throw Invalid{};
 }
 
 bool Date::validate(int d, Month m, int y){
-    if(y<1582 && d<1)
+    if(y<MIN_YEAR && d<1)
         return false;
+        
     switch (m){
         case Month::feb:
             if(isLeapYear(y))
@@ -47,15 +48,15 @@ int Date::getYear(){
 void Date::setDay(int d){
     if(validate(d, month, year))
         day = d;
-    else throw new Invalid{};
+    else throw Invalid{};
 }
 void Date::setMonth(Month m){
     if(validate(day, m, year))
         month = m;
-    else throw new Invalid{};
+    else throw Invalid{};
 }
 void Date::setYear(int y){
     if(validate(day, month, y))
         year = y;
-    else throw new Invalid{};
+    else throw Invalid{};
 }

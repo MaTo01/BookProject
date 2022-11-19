@@ -18,9 +18,8 @@ public:
     /*Costruttore di default della classe Book che sfrutta la init list
     NOTA: non e' necessario il controllo degli argomenti del costruttore, gia' effettuato all'interno delle classi
     Isnb e Date; ogni Book creato e' reso disponibile*/
-    //TODO: costruttore con stringa ISBN
     Book() : nome{""}, cognome{""}, titolo{""}, isbn{Isbn()}, data{Date()}, disponibile{true} {}
-    Book(std::string, std::string, std::string, Isbn, Date);
+    Book(std::string, std::string, std::string, std::string, Date);
     class Invalid{};
 
     Isbn getIsbn();

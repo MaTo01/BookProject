@@ -10,7 +10,7 @@ public:
     };
     class Invalid{};
 
-    Date() : day{1}, month{jan}, year{1600} {}
+    Date() : day{1}, month{jan}, year{MIN_YEAR} {}
     Date(int, Month, int);
     int getDay();
     Month getMonth();
@@ -23,6 +23,7 @@ private:
     int day;
     Month month;
     int year;
+    static constexpr int MIN_YEAR = 1600;
     
     bool validate(int, Month, int);
     bool isLeapYear(int);

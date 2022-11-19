@@ -1,16 +1,8 @@
 #include "Book.hpp"
 #include <iostream>
-/*
-bool Book::operator==(Book b){
-    return (this->isbn == b.getIsbn());
-}
 
-std::ostream& Book::operator<<(std::ostream& os){
-    return os<<this->isbn;
-}*/
-
-Book::Book(std::string n, std::string c, std::string t, Isbn i, Date d) : 
-    nome {n}, cognome {c}, titolo{t}, isbn{i}, data{d} {}
+Book::Book(std::string n, std::string c, std::string t, std::string i, Date d = Date()) : 
+    nome {n}, cognome {c}, titolo{t}, isbn{Isbn(i)}, data{d}, disponibile{true} {}
 
 Isbn Book::getIsbn(){
     return isbn;
