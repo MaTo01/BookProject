@@ -12,13 +12,13 @@ private:
     std::string nome;
     std::string cognome;
     Date data;
-    bool disponibile;       
+    bool disponibile = true;       
     
 public:
     /*Costruttore di default della classe Book che sfrutta la init list
     NOTA: non e' necessario il controllo degli argomenti del costruttore, gia' effettuato all'interno delle classi
     Isnb e Date; ogni Book creato e' reso disponibile*/
-    Book() : nome{""}, cognome{""}, titolo{""}, isbn{Isbn()}, data{Date()}, disponibile{true} {}
+    Book() : nome{""}, cognome{""}, titolo{""}, isbn{Isbn()}, data{Date()} {}
     Book(std::string, std::string, std::string, std::string, Date d = Date());
     class Invalid{};
 
