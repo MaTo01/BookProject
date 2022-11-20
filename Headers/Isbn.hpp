@@ -30,6 +30,7 @@ public:
 
     std::ostream& operator<<(std::ostream&);
     bool operator==(Isbn);
+    bool operator!=(Isbn);
     //TODO: == con std::string?
 };
 
