@@ -1,8 +1,9 @@
 #include "Book.hpp"
 #include <iostream>
 
-Book::Book(std::string n, std::string c, std::string t, std::string i, Date d) : 
-    nome {n}, cognome {c}, titolo{t}, isbn{Isbn(i)}, data{d}, disponibile{true} {}
+Book::Book(std::string n, std::string c, std::string t, std::string i/*, Date d*/) : 
+    nome {n}, cognome {c}, titolo{t}, isbn{Isbn(i)}/*, data{d}*/, disponibile{true} {}
+
 
 Isbn Book::getIsbn(){
     return isbn;
@@ -20,6 +21,7 @@ Date Book::getData(){
     return data;
 }
 
+
 void Book::setIsbn(Isbn i){
     isbn = i;
 }
@@ -36,9 +38,11 @@ void Book::setData(Date d){
     data = d;
 }
 
-bool Book::isDisponibile(){ /*gestisce lo stato del libro: */
+
+bool Book::isDisponibile(){ 
     return disponibile;
 }
+
 void Book::presta(){
     if(disponibile){
         disponibile = false;
@@ -51,14 +55,23 @@ void Book::restituisci(){
 }
 
 //confronta due libri basandosi sul codice ISBN
-bool Book::operator==(Book b) { 
-    
+bool Book::operator==(Isbn& book) { 
+    Book b = *this;
+    if(b.getIsbn() == book) {return true;}
+    else {return false;} 
 }
 
-bool Book::operator!=(Book b) {
-
+bool Book::operator!=(Isbn& book) {
+    Book b = *this;
+    if( b.getIsbn() != book) {return true;}
+    else {return false;}
 }
 
 std::ostream& Book::operator<<(std::ostream& os) {
-
+   os << "TITOLO: " << this->getTitolo() << "\n"
+   << "AUTORE: " << this->getNome() << " " << this->getCognome() << "\n"
+   /*<< "ISBN: " << this->getIsbn() << "\n*/
+   /*<< "DATA DI COPYRIGHT: " << this->getData() << "\n"*/
+   << "DISPONIBILE: " << this->isDisponibile();  
+   return os;
 }
