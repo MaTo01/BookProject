@@ -1,7 +1,7 @@
 #include "Book.hpp"
 #include <iostream>
 
-Book::Book(std::string n, std::string c, std::string t, std::string i, Date d = Date()) : 
+Book::Book(std::string n, std::string c, std::string t, std::string i, Date d) : 
     nome {n}, cognome {c}, titolo{t}, isbn{Isbn(i)}, data{d}, disponibile{true} {}
 
 Isbn Book::getIsbn(){

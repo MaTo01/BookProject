@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 
-Isbn::Isbn(std::string a = 0, std::string b = 0, std::string c = 0, char d = '0'){
+Isbn::Isbn(std::string a, std::string b, std::string c, char d){
     if(validate(a,b,c,toupper(d)))
        n1 = a, n2 = b, n3 = c, x = toupper(d); 
     else throw Invalid{};
