@@ -55,6 +55,10 @@ bool Isbn::operator==(Isbn i){
     return (this->n1==i.n1 && this->n2==i.n2 && this->n3==i.n3 && this->x==i.x);
 }
 
+bool Isbn::operator!=(Isbn i){
+    return !(this->n1==i.n1 && this->n2==i.n2 && this->n3==i.n3 && this->x==i.x);
+}
+
 //funzione che controlla la validità di una stringa secondo il formato di N (solo cifre)
 bool Isbn::validateString(std::string s){
     if(s.empty())                       //se la stringa è vuota non è valida
