@@ -36,15 +36,6 @@ bool Date::isLeapYear(int y){
     return true;
 }
 
-int Date::getDay(){
-    return day;
-}
-Date::Month Date::getMonth(){
-    return month;
-}
-int Date::getYear(){
-    return year;
-}
 void Date::setDay(int d){
     if(validate(d, month, year))
         day = d;
@@ -59,4 +50,8 @@ void Date::setYear(int y){
     if(validate(day, month, y))
         year = y;
     else throw Invalid{};
+}
+
+std::ostream& operator<<(std::ostream& os, const Date& date){
+    return os<<date.getDay()<<"/"<<date.getMonth()<<"/"<<date.getYear();
 }

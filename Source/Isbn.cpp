@@ -21,11 +21,6 @@ Isbn::Isbn(std::string s){
     else throw Invalid{};
 }
 
-std::string Isbn::getN1() { return n1; }
-std::string Isbn::getN2() { return n2; }
-std::string Isbn::getN3() { return n3; }
-char Isbn::getX() { return x; }
-
 void Isbn::setN1(std::string a) {
     if(validateString(a))
         n1 = a;
@@ -47,16 +42,16 @@ void Isbn::setX(char d) {
     else throw Invalid{};
 }
 
-std::ostream& Isbn::operator<<(std::ostream& os){
-    return os<<this->n1<<"-"<<this->n2<<"-"<<this->n3<<"-"<<this->x;
+std::ostream& operator<<(std::ostream&  os, const Isbn& isbn){
+    return os<<isbn.getN1()<<"-"<<isbn.getN2()<<"-"<<isbn.getN3()<<"-"<<isbn.getX();
 }
 
-bool Isbn::operator==(Isbn i){
-    return (this->n1==i.n1 && this->n2==i.n2 && this->n3==i.n3 && this->x==i.x);
-}
 
-bool Isbn::operator!=(Isbn i){
-    return !(this->n1==i.n1 && this->n2==i.n2 && this->n3==i.n3 && this->x==i.x);
+bool operator==(const Isbn& isbn1, const Isbn& isbn2){
+    return (isbn1.getN1() == isbn2.getN1() &&
+            isbn1.getN2() == isbn2.getN2() &&
+            isbn1.getN3() == isbn2.getN3() &&
+            isbn1.getX() == isbn2.getX());
 }
 
 //funzione che controlla la validità di una stringa secondo il formato di N (solo cifre)

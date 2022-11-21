@@ -12,9 +12,9 @@ public:
 
     Date() : day{1}, month{jan}, year{MIN_YEAR} {}
     Date(int, Month, int);
-    int getDay();
-    Month getMonth();
-    int getYear();
+    int getDay() const {return day;}
+    Month getMonth() const {return month;}
+    int getYear() const {return year;}
     void setDay(int d);
     void setMonth(Month m);
     void setYear(int y);
@@ -28,5 +28,7 @@ private:
     bool validate(int, Month, int);
     bool isLeapYear(int);
 };
+
+std::ostream& operator<<(std::ostream& os, const Date& date);
 
 #endif
