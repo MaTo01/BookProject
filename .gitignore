@@ -1,0 +1,16 @@
+
+build/CMakeCache.txt
+.vscode/c_cpp_properties.json
+.vscode/settings.json
+build/CMakeCache.txt
+.codelite/BookProject-vansa.tags
+.codelite/BookProject.session
+.codelite/BookProject.workspace.vansa
+.ctagsd/ctagsd.json
+.ctagsd/file_list.txt
+.ctagsd/tags.db
+BookProject.mk
+book.exe
+BookProject.project
+BookProject.workspace
+Makefile

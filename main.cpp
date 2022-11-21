@@ -1,7 +1,11 @@
-#include ".\headers\Date.hpp"
-#include ".\headers\Isbn.hpp"
-#include ".\headers\Book.hpp"
+#include "Date.hpp"
+#include "Isbn.hpp"
+#include "Book.hpp"
 #include <iostream>
+
+/*compile command: 
+    g++ -o book.exe main.cpp source/Book.cpp source/Isbn.cpp source/Date.cpp -I headers
+*/
 
 int main()
 {
