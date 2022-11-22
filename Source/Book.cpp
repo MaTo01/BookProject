@@ -47,7 +47,7 @@ bool operator!=(const Book& book1, const Book& book2) {
  * TITOLO: <Titolo libro>
  * AUTORE: <Nome autore><Cognome autore>
  * ISBN: <ISBN libro> 
- * DATA DI COPYRIGHT: <Data di copyright del libero>
+ * DATA DI COPYRIGHT: <Data di copyright del libro>
  * DISPONIBILE: <Disponibilità>
  *
  *Dopo diverse prove sembra essere l'indentazione più compatta e leggibile
