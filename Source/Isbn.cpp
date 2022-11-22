@@ -2,7 +2,6 @@
 #include <iostream>
 #include <vector>
 
-/* Il costruttore assegna i valori passati solo se sono tutti validi */
 Isbn::Isbn(std::string a, std::string b, std::string c, char d){
     if(validate(a,b,c,toupper(d)))
        n1 = a, n2 = b, n3 = c, x = toupper(d); 
