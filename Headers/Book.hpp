@@ -75,7 +75,7 @@ public:
 bool operator==(const Book& book1, const Book& book2);
 bool operator!=(const Book& book1, const Book& book2);
 
-// Output to stream
+/* Output to stream */
 std::ostream& operator<<(std::ostream& os, const Book& book);
 
 #endif
