@@ -8,7 +8,6 @@ public:
     enum Month{
         jan=1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec
     };
-    class Invalid{};
 
     /* Costruttori */
     Date() : day{1}, month{jan}, year{MIN_YEAR}, defaultDate{true} {}
@@ -24,6 +23,8 @@ public:
     /* Funzione utilizzata per distinguere una data di default dalla data minima */
     bool isDefault();
 
+    class Invalid{};
+    
 private:
     int day;
     Month month;
