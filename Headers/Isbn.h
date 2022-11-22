@@ -16,7 +16,6 @@ private:
     std::vector<std::string> splitString(std::string, char);
 
 public:
-    class Invalid{};
 
     /* Costruttori */
     Isbn() : n1{"0"}, n2{"0"}, n3{"0"}, x{'0'} {}
@@ -32,10 +31,14 @@ public:
     void setN2(std::string);
     void setN3(std::string);
     void setX(char);
+    
+    class Invalid{};
 };
 
+/* Output to stream */
 std::ostream& operator<<(std::ostream& os, const Isbn& isbn);
 
+/* Operatore di confronto*/
 bool operator==(const Isbn& isbn1, const Isbn& isbn2);
 
 #endif
