@@ -34,7 +34,7 @@ public:
     void setX(char);
 };
 
-std::ostream& operator<<(std::ostream&  os, const Isbn& isbn);
+std::ostream& operator<<(std::ostream& os, const Isbn& isbn);
 
 bool operator==(const Isbn& isbn1, const Isbn& isbn2);
 
