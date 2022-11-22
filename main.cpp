@@ -43,7 +43,7 @@ int main()
 	std::cout<<"book1, book2, book3 aggiungi a shelf\n\n";
 	std::cout<<"STAMPA DI SHELF\n";
     	for(int i=0; i<shelf.size(); i++){
-        	std::cout<<shelf[i]<<"\n";
+        	std::cout<<"\n"<<shelf[i]<<"\n";
     	}	
     
 	return 0;
