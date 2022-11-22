@@ -74,7 +74,7 @@ std::ostream& operator<<(std::ostream& os, const Book& book) {
      *       alla voce "disponibile", utiliziamo l'operatore ternario
      *       per mantenere il codice compatto e visualizzare "SI" o "NO"
      */
-    << "\nDISPONIBILE: " << ((book.isDisponibile())?"SI":"NO");   
+    os << "\nDISPONIBILE: " << ((book.isDisponibile())?"SI":"NO");   
     
     return os;
 }
