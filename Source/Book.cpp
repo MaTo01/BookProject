@@ -19,6 +19,9 @@ void Book::setCognome(std::string c){
 void Book::setData(Date d){
     data = d;
 }
+void Book::setDisponibile(bool d){
+    disponibile = d;
+}
 
 void Book::presta(){
     if(disponibile){
@@ -41,10 +44,14 @@ bool operator!=(const Book& book1, const Book& book2) {
 }
 
 std::ostream& operator<<(std::ostream& os, const Book& book) {
-   os << "TITOLO: " << book.getTitolo() << "\n"
-   << "AUTORE: " << book.getNome() << " " << book.getCognome() << "\n"
-   << "ISBN: " << book.getIsbn() << "\n"
-   << "DATA DI COPYRIGHT: " << book.getData() << "\n"
-   << "DISPONIBILE: " << ((book.isDisponibile())?"SI":"NO");  
-   return os;
+    os << "TITOLO: " << book.getTitolo() << "\n"
+    << "AUTORE: " << book.getNome() << " " << book.getCognome() << "\n"
+    << "ISBN: " << book.getIsbn() << "\n"
+    << "DATA DI COPYRIGHT: ";
+    if(book.getData().isDefault())
+        os << "non disponibile";
+    else
+        os << book.getData();
+    os << "\nDISPONIBILE: " << ((book.isDisponibile())?"SI":"NO");  
+    return os;
 }

@@ -33,6 +33,7 @@ public:
     void setNome(std::string);
     void setCognome(std::string);
     void setData(Date);
+    void setDisponibile(bool);
     
     bool isDisponibile() const {return disponibile;} /*gestisce lo stato del libro: */
     void presta();

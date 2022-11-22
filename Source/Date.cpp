@@ -7,6 +7,22 @@ Date::Date(int d, Month m, int y){
     else throw Invalid{};
 }
 
+void Date::setDay(int d){
+    if(validate(d, month, year))
+        day = d;
+    else throw Invalid{};
+}
+void Date::setMonth(Month m){
+    if(validate(day, m, year))
+        month = m;
+    else throw Invalid{};
+}
+void Date::setYear(int y){
+    if(validate(day, month, y))
+        year = y;
+    else throw Invalid{};
+}
+
 bool Date::validate(int d, Month m, int y){
     if(y<MIN_YEAR || d<1 || m<1 || m>12)
         return false;
@@ -41,22 +57,12 @@ bool Date::isLeapYear(int y){
     return true;
 }
 
-void Date::setDay(int d){
-    if(validate(d, month, year))
-        day = d;
-    else throw Invalid{};
-}
-void Date::setMonth(Month m){
-    if(validate(day, m, year))
-        month = m;
-    else throw Invalid{};
-}
-void Date::setYear(int y){
-    if(validate(day, month, y))
-        year = y;
-    else throw Invalid{};
+bool Date::isDefault(){
+    return day==0;
 }
 
 std::ostream& operator<<(std::ostream& os, const Date& date){
-    return os<<date.getDay()<<"/"<<date.getMonth()<<"/"<<date.getYear();
+    return os<<((date.getDay()<10)?"0":"")<<date.getDay()
+        <<"/"<<((date.getMonth()<10)?"0":"")<<date.getMonth()
+        <<"/"<<date.getYear();
 }

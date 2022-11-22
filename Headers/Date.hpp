@@ -10,7 +10,7 @@ public:
     };
     class Invalid{};
 
-    Date() : day{1}, month{jan}, year{MIN_YEAR} {}
+    Date() : day{0}, month{jan}, year{MIN_YEAR} {}
     Date(int, Month, int);
     int getDay() const {return day;}
     Month getMonth() const {return month;}
@@ -18,6 +18,8 @@ public:
     void setDay(int d);
     void setMonth(Month m);
     void setYear(int y);
+
+    bool isDefault();
 
 private:
     int day;
