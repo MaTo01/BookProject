@@ -4,7 +4,7 @@
 #include <iostream>
 
 /*Compile command: 
-    g++ -o book.exe main.cpp source/Book.cpp source/Isbn.cpp source/Date.cpp -I headers
+    g++ -o book.exe main.cpp Source/Book.cpp Source/Isbn.cpp Source/Date.cpp -I Headers
 */
 
 int main()
@@ -36,7 +36,7 @@ int main()
 	my_third_favourite_book.restituisci();
 	std::cout<<"BOOK3 restituito\n"<<my_third_favourite_book<<"\n\n";
 
-	/* Inizializzazione della shelf */
+	/* Inizializzazione e stampa della shelf */
 	shelf[0] = my_favourite_book;
 	shelf[1] = my_second_favourite_book;
 	shelf[2] = my_third_favourite_book;
