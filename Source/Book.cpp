@@ -59,8 +59,8 @@ std::ostream& operator<<(std::ostream& os, const Book& book) {
     << "DATA DI COPYRIGHT: ";
     
     /* NOTA: nella classe Date abbiamo definito un anno minimo che verrebbe
-     *       visualizzato in output se un libro viene inizializzato tramite
-     *       costruttore standard. Per evitarlo, visto che risulterebbe
+     *       visualizzato in output se la data di un libro viene inizializzata 
+     *       tramite costruttore di default. Per evitarlo, visto che risulterebbe
      *       poco conforme dare una data a un libro senza titolo e autore,
      *       utilizziamo questo if per visualizzare "non disponibile" nel
      *       caso appena descritto
