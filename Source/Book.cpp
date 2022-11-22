@@ -34,7 +34,7 @@ void Book::restituisci(){
     }
 }
 
-/*Confronto tra due libri secondo l'ISBN*/
+/* Confronto tra due libri secondo l'ISBN */
 bool operator==(const Book& book1, const Book& book2) { 
     return book1.getIsbn() == book2.getIsbn();
 }
