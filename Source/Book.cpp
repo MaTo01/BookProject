@@ -51,7 +51,6 @@ bool operator!=(const Book& book1, const Book& book2) {
  * DISPONIBILE: <Disponibilità>
  *
  *Dopo diverse prove sembra essere l'indentazione più compatta e leggibile
- *
  */
 std::ostream& operator<<(std::ostream& os, const Book& book) {
     os << "TITOLO: " << book.getTitolo() << "\n"
