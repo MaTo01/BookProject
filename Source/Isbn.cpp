@@ -81,9 +81,9 @@ std::vector<std::string> Isbn::splitString(std::string s, char delim){
     std::vector<std::string> elems;
     std::string aux = "";
 
-    //controlla ogni carattere della stringa:
-    //se non è il delimitatore continua a "costruire" la sottostringa tramite la variabile aux
-    //altrimenti aggiunge aux al vettore delle sottostringhe e la svuota
+    /* Controllo ogni carattere della stringa:
+     * se non è il delimitatore continuo a "costruire" la sottostringa tramite la variabile aux,
+     * altrimenti aggiungo aux al vettore delle sottostringhe e la svuota */
     for(int i=0; i<s.length(); i++){
         if(s[i]==delim){
             elems.push_back(aux);
@@ -92,9 +92,9 @@ std::vector<std::string> Isbn::splitString(std::string s, char delim){
             aux += s[i];
         }
     }
-    //per il funzionamento del ciclo soprastante l'ultima sottostringa non viene salvata nel vector 
-    //se l'ultimo carattere non è un delimitatore
-    //perciò se aux contiene ancora una sottostringa non vuota questa viene aggiunta a elems
+    /* Per il funzionamento del ciclo soprastante l'ultima sottostringa non viene
+     * salvata nel vector se l'ultimo carattere non è un delimitatore,
+     * perciò se aux contiene ancora una sottostringa non vuota questa viene aggiunta a elems */
     if(!aux.empty())
         elems.push_back(aux);
 

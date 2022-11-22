@@ -29,9 +29,9 @@ private:
     int day;
     Month month;
     int year;
-    /* flag per distinguere una data 01/01/1600 impostata di default da una impostata manualmente*/
+    /* Flag per distinguere una data 01/01/1600 impostata di default da una impostata manualmente */
     bool defaultDate;
-    /* valore minimo accettato per l'anno */
+    /* Valore minimo accettato per l'anno */
     static constexpr int MIN_YEAR = 1600;
     
     /* Funzione per validare i valori di una data */

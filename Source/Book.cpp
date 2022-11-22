@@ -34,7 +34,7 @@ void Book::restituisci(){
     }
 }
 
-/*Confronto tra isbn di due libri*/
+/*Confronto tra due libri secondo l'ISBN*/
 bool operator==(const Book& book1, const Book& book2) { 
     return book1.getIsbn() == book2.getIsbn();
 }
@@ -71,7 +71,7 @@ std::ostream& operator<<(std::ostream& os, const Book& book) {
         os << book.getData();
     
     /* NOTA: per evitare di visualizzare uno 0 o un 1 in output 
-     *       alla voce "disponibile", utiliziamo l'operatore ternario
+     *       alla voce "disponibile", utilizziamo l'operatore ternario
      *       per mantenere il codice compatto e visualizzare "SI" o "NO"
      */
     os << "\nDISPONIBILE: " << ((book.isDisponibile())?"SI":"NO");   

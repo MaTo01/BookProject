@@ -8,11 +8,11 @@ Date::Date(int d, Month m, int y){
 }
 
 /* La soluzione iniziale per distinguere una data di default era di assegnare 0 al giorno nel 
-    costruttore di default dato che non è una valore valido in altri casi,
-    tuttavia questo avrebbe reso non validi tutti i set a meno di fare un set del giorno prima degli altri.
-    Si è quindi deciso di utilizzare una flag defaultDate per distinguere un'inizializzazione con 
-    il costruttore di default (ossia in questo contesto una data non inserita nel libro); 
-    alla prima modifica della data questa viene impostata a false */
+ * costruttore di default dato che non è una valore valido in altri casi,
+ * tuttavia questo avrebbe reso non validi tutti i set a meno di fare obbligatoriamente set del giorno prima degli altri.
+ * Si è quindi deciso di utilizzare una flag defaultDate per distinguere un'inizializzazione con 
+ * il costruttore di default (ossia in questo contesto una data non inserita nel libro); 
+ * alla prima modifica della data questa flag viene impostata a false. */
 void Date::setDay(int d){
     if(validate(d, month, year)){
         day = d;
